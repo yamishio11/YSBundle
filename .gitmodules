@@ -1,0 +1,3 @@
+[submodule "src/Modules/RoSe"]
+	path = src/Modules/RoSe
+	url = https://github.com/yamishio11/RoSe

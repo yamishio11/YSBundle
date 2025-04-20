@@ -8,10 +8,10 @@ BETTER DOCS SOON!!
 Basic structure is:
 ```
 Mod/
-├─ Assets/
-│  ├─ Part
-├─ Modules/
-│  ├─ testModule
-├─ init.server
-├─ init.client
+├── Assets/
+│   └── Part
+├── Modules/
+│   └── testModule
+├── init.client
+└── init.server
 ```

@@ -6,7 +6,7 @@ YSBundler is the plugin used for bundling mods for YSMM, supports YSS3 type seri
 BETTER DOCS SOON!!
 
 Basic structure is:
-
+```
 Mod/
 ├─ Assets/
 │  ├─ Part
@@ -14,3 +14,4 @@ Mod/
 │  ├─ testModule
 ├─ init.server
 ├─ init.client
+```

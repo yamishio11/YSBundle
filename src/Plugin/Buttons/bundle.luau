@@ -3,6 +3,8 @@ button.Name = "Pack"
 button.Description = "Bundles the selected instances"
 local RoSe = require(script.Parent.Parent.Modules.RoSe)
 local Helpers = require(script.Parent.Parent.Modules.Helpers)
+local ScriptEditorService = game:GetService('ScriptEditorService')
+
 function button:onClick(selection)
     if #selection == 1 then
         if selection[1]:IsA("Folder") then
@@ -55,7 +57,8 @@ function button:onClick(selection)
                 local ns = Instance.new("Script")
                 local fileName = string.format("YSBundle-%s", game:GetService("HttpService"):GenerateGUID(false):sub(0, 8))
                 ns.Name = fileName
-                ns.Source = bundle
+                -- ns.Source = bundle
+                ScriptEditorService:UpdateSourceAsync(ns, bundle)
                 ns.Parent = workspace
                 local Selection = game:GetService("Selection")
                 Selection:Set({ns})

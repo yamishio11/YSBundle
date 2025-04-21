@@ -58,7 +58,9 @@ function button:onClick(selection)
                 local fileName = string.format("YSBundle-%s", game:GetService("HttpService"):GenerateGUID(false):sub(0, 8))
                 ns.Name = fileName
                 -- ns.Source = bundle
-                ScriptEditorService:UpdateSourceAsync(ns, bundle)
+                ScriptEditorService:UpdateSourceAsync(ns, function()
+                    return bundle
+                end)
                 ns.Parent = workspace
                 local Selection = game:GetService("Selection")
                 Selection:Set({ns})
